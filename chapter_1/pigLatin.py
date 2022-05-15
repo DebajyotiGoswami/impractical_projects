@@ -30,9 +30,13 @@ def main():
     '''
     main function. program starts here
     '''
-    sentence = input("Enter your sentence : ")
-    pig_latin = pigLatin(sentence)
-    print(pig_latin, file=sys.stderr)
+    while True:
+        sentence = input("Enter your sentence : ")
+        pig_latin = pigLatin(sentence)
+        print(pig_latin, file=sys.stderr)
+        choice = input("Enter 'N/n' to quit the game : ")
+        if choice.lower() == 'n':
+            break
 
 if __name__ == '__main__':
     main()
