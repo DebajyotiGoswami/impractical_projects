@@ -25,6 +25,7 @@ def create_chart(sentence):
     chart = {}
 
     for character in sentence:
+        character = character.lower()
         if character in letters:
             chart.setdefault(character, 0)
             chart[character] += 1
